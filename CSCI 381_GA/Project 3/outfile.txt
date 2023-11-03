@@ -1,0 +1,18 @@
+Generation: 0
+Best Fitness: 2
+Worst Fitness: 0
+Average Fitness: 0.123
+----------------------
+Generation: 50
+Best Fitness: 3
+Worst Fitness: 0
+Average Fitness: 0.219
+----------------------
+Generation: 99
+Best Fitness: 6
+Worst Fitness: 0
+Average Fitness: 0.186
+----------------------
+22 9 14 15 12 3 4 15 6 20 8 7 22 15 7 11 21 15 3 0 23 2 15 20 
+Fitness: 6
+Generation: 100
