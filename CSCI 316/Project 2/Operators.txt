@@ -1,0 +1,14 @@
+:= Assign_OP
+: Declare_OP
+= Equal_OP
+> GreaterThan_OP
+< LessThen_OP
+>= GreaterThanOrEqual_OP
+<= LessThenOrEqual_OP
+== Equals_Bool_OP
+- Sub_OP
++ Add_OP
+* Multiply_OP
+/ Div_OP
+% Mod_OP
+INTEGER INT_Type

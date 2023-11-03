@@ -1,0 +1,68 @@
+PROGRAM  ChangeMaker ;
+  (* Make change  for a dollar *)
+  VAR
+  Cost :      INTEGER ;
+  Remainder : INTEGER ;
+  Quarters :  INTEGER ;
+  Nickels :  INTEGER ;
+  Pennies :  INTEGER ;
+  Dimes : INTEGER ;
+  BEGIN
+  (* Input the  Cost *)
+  Write ( ' Enter the  cost in cents : ' ) ;
+  Read ( Cost ) ;
+  (* Make the  Change *)
+  Remainder := 100 - Cost ;
+  Quarters :=  Remainder DIV 25 ;
+  Remainder :=  Remainder MOD 25 ;
+  Dimes :=  Remainder DIV 10 ;
+  Remainder :=  Remainder MOD 10 ;
+  Nickels :=  Remainder DIV 5 ;
+  Remainder :=  Remainder MOD 5 ;
+  Pennies :=  Remainder ;
+  (* Output the  coin count *)
+  WriteLn ( ' The  change is ' ) ;
+  WriteLn ( Quarters :  2 , ' quarters ' ) ;
+  WriteLn ( Dimes :  2 , ' dimes ' ) ;
+  WriteLn ( Nickels :  2 , ' nickels ' ) ;
+  WriteLn ( Pennies :  2 , ' pennies ' ) ;
+  END (*  ChangeMaker *)
+ 
+PROGRAM Payroll ;
+  { Repetitive pay algorithm }
+  CONST WeekHours = 7 * 24 ; (* Hours in a week *)
+  VAR Hours , Rate , Pay : INTEGER ;
+  BEGIN
+  Write ( ' Give number of hours and rate ' ) ;
+  Read ( Hours , Rate ) ; 
+  WHILE Hours >= 0 DO BEGIN
+  IF ( Hours < 0 ) OR ( Hours > WeekHours ) THEN
+  Writeln ( ' Error in hours ' )
+  ELSE BEGIN
+  IF Hours <= 60 THEN
+  IF Hours <= 40 THEN
+  Pay := Hours * Rate
+  ELSE
+  Pay :=  ROUND ( 40 * Rate + 1.5 * Rate * ( Hours - 40 ) )
+  ELSE
+  Pay : 70 * Rate + 2 * Rate * (Hours - 60 ) ;
+  Writeln ( ' The pay is ' , Pay ) ;
+  END ; { IF }
+  Write ( ' Give number of hours and rate ' ) ;
+  Read ( Hours , Rate ) ;
+  END ; { WHILE }
+  END
+ 
+ PROGRAM Second ;
+  (* Determines  the birth year *)
+  CONST
+  Year = 2000 ;
+  VAR
+  Age : INTEGER ;
+  BEGIN
+  Write ( ' How old  are you? ' ) ;
+  Read ( Age ) ;
+  Write ( ' You were  born around ' ) ;
+  Write ( ( Year -  Age ) : 4 ) ;
+  END
+ 
